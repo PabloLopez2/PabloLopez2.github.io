@@ -11,3 +11,32 @@ background-image:url(logo.png);
 background-repeat:no-repeat;
 background-size:128px;
 }
+
+.error{
+color:red;
+}
+#titulo_juego{
+border-bottom:2px solid #00cc00;
+}
+#contact-main{
+padding:32px;
+}
+
+#contact-main h2{
+font-family:sans-serif;
+text-shadow: 2px 2px #ff0000;/*x e y*/
+color:#ffffff;
+-webkit-text-stroke: 1px #000000
+}
+
+#contact-main form p{
+display:flex;
+}
+#contact-main form label{
+width:160px;
+}
+
+#contact-main form p:nth-child/*Pseudoselector*/(odd){
+background-color:#ff0000;
+}
+
