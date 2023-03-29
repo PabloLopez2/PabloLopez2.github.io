@@ -35,9 +35,33 @@ function check_number (){
 	}
 }
 
+fetch("enbuscadepaco.json").then(function(response){
+	return response.json();
+}).then(function(data){
+	console.log(data.name);
+	
+});
+
+function carga_datos (id_character) {
+	fetch("character"+id_character+".json").then(function(response) {
+		return response.json();
+	}).then(function(data){	
+		let lista = "<ul>";
+		lista += "<li>Nombre: "+data.name+"</li>";
+		lista += "<li>Nombre: "+data.age+"</li>";
+		lista += "<li>Nombre: "+data.race+"</li>";
+		lista += "<li>: "+data.1+"</li>";
+		lista += "</ul>";
+		console.log(data);
+		document.getElementById("character_data").innerHTML = lista;
+
+	});
+}
+
+
 </script>
 </head>
-<body>
+<body id="game-page">
 	<header>
 		<h1>Pablo López Socias<abbr title="Escola de Noves Tecnologies Interactives">ENTI</abbr></h1>
 		<p>Soy estudiante de Cyber,  me gusta investigar, leer y actualizarme</p>
@@ -58,9 +82,22 @@ function check_number (){
 		<form>
 			<p id="resultado">Introduce un número</p>
 			<p><input type="text" id="numero_jugador"/></p>
-			<p><input type="button" value="¡Adivina!" onClick="check_number();" /></p>
+			<p><input type="button" value="¡Adivina!" onClick="check_number();" id="botoncito" /></p>
 
 		</form>
+
+		<form id="characters" >
+		<ul id="character_list">
+			<li><button type="button" id="character1" onClick="carga_datos(1);">Eustaquio</button></li>
+			<li><button type="button" id="character2" onClick="carga_datos(2);">Mariana</button></li>
+		</ul>
+		<section id="character_data">
+		
+		</section>
+		
+		</form>
+
+
 	</main>
 
 	<footer>

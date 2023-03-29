@@ -5,7 +5,39 @@
 <meta charset="UTF-8" />
 	<title>Pablo's Project</title>
 	<link rel="stylesheet" href="style.css" />
+	<script>
+
+function cambia (){
+	document.getElementById("boton_color").style.backgroundColor = "red";
+}
+
+let contador=0;
+
+function cuenta () {
+	contador++;
+	document.getElementById("contador").innerHTML = contador;
+}
+
+let contador_interval = setInterval(cuenta, 10);
+
+function cuenta2 (){
+
+contador --;
+	
+	if (contador == -1){
+		document.getElementById("contador").innerHTML = "FIN DEL TIEMPO";
+		clearInterval(contador_interval);
+	}
+	else{
+		document.getElementById("contador").innerHTML = contador;
+	}
+}
+
+	</script>
+	
+
 </head>
+
 <body>
 	<header>
 		<h1>Pablo López Socias<abbr title="Escola de Noves Tecnologies Interactives">ENTI</abbr></h1>
@@ -78,13 +110,15 @@
         <input type="url" name="website" required></p>
 
 
-        <p><input type="submit" value="Enviar" required/></p>
-        </form> </main>
 
-
-
+		<p><input type="button" value="CAMBIA COLOR" id="boton_color" onClick="cambia();" /></p>
 
 		<p><input type="submit" value="Enviar" /></p>
+
+
+		<p id="contador">0</p>
+		
+
 		</form>
 
 	</main>

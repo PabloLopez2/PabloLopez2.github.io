@@ -40,3 +40,25 @@ width:160px;
 background-color:#ff0000;
 }
 
+#game-page header{
+background-color:red;
+}
+
+#character_list{
+display:flex;
+padding:0;
+margin:0;
+list-style:none;
+}
+
+#character_list button{
+border-radius:16px;
+border-bottom-left-radius:0;
+border-bottom-right-radius:0;
+border:0;
+}
+
+#character_data{
+background-color:#ccc;
+}
+
