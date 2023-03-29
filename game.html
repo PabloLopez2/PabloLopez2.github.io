@@ -47,10 +47,10 @@ function carga_datos (id_character) {
 		return response.json();
 	}).then(function(data){	
 		let lista = "<ul>";
-		lista += "<li>Nombre: "+data.name+"</li>";
-		lista += "<li>Nombre: "+data.age+"</li>";
-		lista += "<li>Nombre: "+data.race+"</li>";
-		lista += "<li>: "+data.height+"</li>";
+		lista += "<li>Name: "+data.name+"</li>";
+		lista += "<li>Age: "+data.age+"</li>";
+		lista += "<li>Race: "+data.race+"</li>";
+		lista += "<li>:Height"+data.height+"</li>";
 		lista += "</ul>";
 		console.log(data);
 		document.getElementById("character_data").innerHTML = lista;
