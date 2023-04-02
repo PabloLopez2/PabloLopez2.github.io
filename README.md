@@ -1,4 +1,4 @@
-# M04-UF1 PabloLopez2.github.io
+# M04-UF1: PabloLopez2.github.io
 Cyber: Llenguatges de Marques (M04 - UF1)
 
 ## Página web de ejemplo de Lenguajes de Marcas (M04UF1)
@@ -13,19 +13,20 @@ Esta página es un test a modo de CV.
 
 - [x] Crear etilo básico
 
+# Apuntes XML, DTD, Markdown, HTML, CSS y JavasScript
 
 ## XML
 
 ### XML, un poco de historia
 
-**XML** (extended markup language) es el lenguaje base de los lenguajes de marcas que tenemos hoy en día. XML no viene de la nada. En los años 70 era SGML, se utilizaba para marcar en documentos lo que era una negrita, una cursiva, etc. Ya que en aquella época no había interfaz gráfica. El driver de la impresora interpreta esto, lo parseaba y ponía las negritas, cursivas… cuando tocaba. Llegan los 90, aparte de inventarse Linux, se inventa Internet. 
+**XML** (extended markup language) es el lenguaje base de los lenguajes de marcas que tenemos hoy en día. XML no viene de la nada. En los años 70 era SGML, se utilizaba para marcar en documentos lo que era una negrita, una cursiva, etc. Ya que en aquella época no había interfaz gráfica. El driver de la impresora interpreta esto, es decir, lo parseaba y ponía las negritas, cursivas… cuando tocaba. Llegan los 90, aparte de inventarse Linux, se inventa Internet. 
 
 
-### ¿Qué son las marcas y que son los documentos?
+### ¿Qué son las marcas y qué son los documentos?
 
 Las marcas son los elementos que se utilizan para estructurar el contenido del documento. Tienen su apertura y su cierre. Para cerrar las etiquetas se pone una /. Por otro lado, el documento XML es el archivo que contiene la información estructurada utilizando marcas. 
 
-Las marcas se refiere al texto que se tiene que parsear, es decir interpretar, el programa lo interpreta. El parseador tiene que leer el texto plano y cuando lo muestra en pantalla, ha de mostrar el texto en negrita (<B>hola</B>) o en cursiva, (<I>IAN</I>) o subrayar (<U>Guillem<U> ) → esto de las letras que están entre picos se le llaman marcas o etiquetas. <P> (parrafo) <a> (link).
+Las marcas se refiere al texto que se tiene que parsear, es decir interpretar, el programa lo interpreta. El parseador tiene que leer el texto plano y cuando lo muestra en pantalla, ha de mostrar el texto en negrita (<\B>hola</\B>) o en cursiva, (<\I>IAN</\I>) o subrayar (<\U>Guillem<\U> ) → esto de las letras que están entre picos se le llaman marcas o etiquetas. <\P> (parrafo) <\a> (link).
 
 ### Archivos de texto plano, enriquecido y binario:
 * **Texto plano** →  archivo que contiene texto sin formato o estructura, es decir, simplemente una secuencia de caracteres. El texto plano es legible para los humanos y se puede abrir y editar con un editor de texto simple.
