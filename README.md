@@ -1,4 +1,5 @@
-# PabloLopez2.github.io
+# M04-UF1 PabloLopez2.github.io
+Cyber: Llenguatges de Marques (M04 - UF1)
 
 ## Página web de ejemplo de Lenguajes de Marcas (M04UF1)
 
@@ -6,15 +7,12 @@ Esta página es un test a modo de CV.
 
 ## Lista de tareas a hacer en la página
 
-- [ ] Crear plantilla del cuerpo HTML
+- [x] Crear plantilla del cuerpo HTML
 
-- [ ] Añadir navegación
+- [x] Añadir navegación
 
-- [ ] Crear etilo básico
+- [x] Crear etilo básico
 
-
-# M04-UF1
-Cyber: Llenguatges de Marques (M04 - UF1)
 
 ## XML
 
