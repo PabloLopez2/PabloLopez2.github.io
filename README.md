@@ -25,9 +25,9 @@ Esta página es un test a modo de CV.
 ### ¿Qué son las marcas y qué son los documentos?
 
 Las marcas son los elementos que se utilizan para estructurar el contenido del documento. Tienen su apertura y su cierre. Para cerrar las etiquetas se pone una /. Por otro lado, el documento XML es el archivo que contiene la información estructurada utilizando marcas. 
-
-Las marcas se refiere al texto que se tiene que parsear, es decir interpretar, el programa lo interpreta. El parseador tiene que leer el texto plano y cuando lo muestra en pantalla, ha de mostrar el texto en negrita (<\B>hola</\B>) o en cursiva, (<\I>IAN</\I>) o subrayar (<\U>Guillem<\U> ) → esto de las letras que están entre picos se le llaman marcas o etiquetas. <\P> (parrafo) <\a> (link).
-
+ ```XML
+Las marcas se refiere al texto que se tiene que parsear, es decir interpretar, el programa lo interpreta. El parseador tiene que leer el texto plano y cuando lo muestra en pantalla, ha de mostrar el texto en negrita (`<B>hola</B>`) o en cursiva, (`<I>IAN</I>`) o subrayar (`<U>Guillem</U>`) → esto de las letras que están entre picos se le llaman marcas o etiquetas. `<P>` (parrafo) `<a>` (link).
+```
 ### Archivos de texto plano, enriquecido y binario:
 * **Texto plano** →  archivo que contiene texto sin formato o estructura, es decir, simplemente una secuencia de caracteres. El texto plano es legible para los humanos y se puede abrir y editar con un editor de texto simple.
     * *Formatos* → VIM, Notepad, archivos de Kotlin, Python, C++, documentos.txt, docx etc.
