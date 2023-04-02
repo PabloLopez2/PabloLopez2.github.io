@@ -236,12 +236,12 @@ fun printOnlyOdds(list: List<Int?>) {
 ~~***tachado negrita u cursiva***~~
 
 ### Tablas
-| id_character | name | age | level |
-| ---: | ---: | ---: | ---: |
-| 1 | Eustaquio | 197 | 99 |
-| 2 | Mariana | 20 | 100 | 
-| 3 | Mortadelo | 100 | 1 |
-| 4 | Messi | 44 | 99 |
+| id_character | name      | age | level |
+| ---:         | ---:      | ---:| ---:  |
+| 1            | Eustaquio | 197 | 99    |
+| 2            | Mariana   | 20  | 100   | 
+| 3            | Mortadelo | 100 | 1     |
+| 4            | Messi     | 44  | 99    |
 
 
 ### Escapar caracteres
@@ -327,7 +327,6 @@ Elementos en línea → strong y em
 
 Existen Elementos en bloque y en Línea, 
 
-
 Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace falta indentar, es solo para hacerlo más agradable a la vista):
 
 ```HTML
@@ -344,10 +343,9 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
     <header>
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Services</a></li>
-                <li><a href="#">Contact</a></li>
+                <li><a href="Cybersecurity.html">Cybersecurity</a></li>
+                <li><a href="Games.html">Games</a></li>
+                <li><a href="Ethical_Hacking.html">Ethical Hacking</a></li>
             </ul>
         </nav>
     </header>
@@ -360,9 +358,9 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
         <section>
             <h2>Our Services</h2>
             <ul>
-                <li>Web Design</li>
-                <li>Web Development</li>
-                <li>Search Engine Optimization</li>
+                <li>Virtualizators</li>
+                <li>Gaming</li>
+                <li>Optimization</li>
             </ul>
         </section>
         <section>
