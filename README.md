@@ -274,7 +274,7 @@ Al principio solo habia 3 TLDs :
 
 Ponemos **WWW** para diferenciarlos del resto de servicios. Antes se podia acceder por el navegador a una web y utilizar FTP para transferir archivos (*ftp.ubuntu.com*). WWW remarca que cuando nos conectamos a esa direccion, con ese prefijo, nos vamos a conectar al puerto **80**.
 
-Actualmente si por ejemplo entramos a enti.cat, el navegador utiliza HTTPS (no HTTP) y utiliza el puerto correspondiente. Hoy en dia no se le da importancia a veces a WWW. Lo mas habitual es: **Mantenerlo y que se vea.**, **Hacer una redireccion de salto.**
+Actualmente si por ejemplo entramos a enti.cat, el navegador utiliza HTTPS (no HTTP) y utiliza el puerto correspondiente. Hoy en dia no se le da importancia a veces a www . Lo mas habitual es: **Mantenerlo y que se vea.**, **Hacer una redireccion de salto.**
 
 ### Comenzamos HTML (HTML 5 o LIFE SCHEME)
 
@@ -308,16 +308,79 @@ Todo texto o elemento ha de ir dentro de una etiqueta de **bloque**.
 La semántica en HTML5 es importante porque permite que el contenido de una página web sea más fácilmente **interpretado** por los navegadores, lectores de pantalla y otros dispositivos, lo que mejora la accesibilidad y la experiencia del usuario en general.
 
 Tipos de etiquetas:
-* `<html>` → etiqueta raíz
-    * `<head>` → donde hay información de la página, o cosas que se tienen que interpretar en el body. Por ejemplo, el título de la página en la información de la pestaña.
-    * `<body>` → abre y cierra los contenidos 
-    * `<ul>` → bloque de lista, unordered list
-            * `<ol>` → lista ordenada.
-    * `<li>` → elementos
-    * `<a>` → address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
-
+* `<html></html>` → etiqueta raíz
+* `<head></head>` → donde hay información de la página, o cosas que se tienen que interpretar en el body. Por ejemplo, el título de la página en la información de la pestaña.
+    * `<title></title>`
+    * `<meta></meta>`
+    * `<script></script>`
+    * `<style></style>` 
+    * 
+* `<body></body>` → abre y cierra los contenidos 
+* `<ul></ul>` → bloque de lista, unordered list
+* `<ol></ol>` → lista ordenada.
+    * `<li></li>` → elementos
+    * `<a></a>` → address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
+    * <>
 **`<head>`** y **`<body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)*
 P y h1 son elementos en bloque, 
 Elementos en línea → strong y em
 
 Existen Elementos en bloque y en Línea, 
+
+
+Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace falta indentar, es solo para hacerlo más agradable a la vista):
+
+```HTML
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Website</title>
+    <meta name="description" content="This my website">
+    <meta name="keywords" content="HTML, CSS, JavaScript, web development">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <section>
+            <h1>Welcome to my website!</h1>
+            <p>Here you will find information about our services and products.</p>
+            <a href="#" class="button">Learn more</a>
+        </section>
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>Web Design</li>
+                <li>Web Development</li>
+                <li>Search Engine Optimization</li>
+            </ul>
+        </section>
+        <section>
+            <h2>Contact Us</h2>
+            <form>
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message"></textarea>
+                <button type="submit">Send</button>
+            </form>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2023 My Website. All rights reserved.</p>
+    </footer>
+</body>
+</html>
+```
