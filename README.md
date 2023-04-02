@@ -72,10 +72,10 @@ Para acabar con la historia, hay una frase que me gustaría citar:
     * *Formartos* → Imagen JPEG, PNG, archivos de audio MP3, .MP4, archivos sql.
 
 ### Tipos de etiquetas
->**cabecera →** \<?xml version="1.0" encoding="UTF-8" ?>. 
+>**cabecera →** `<?xml version="1.0" encoding="UTF-8" ?>.`
 >>Esto indica a nuestro programa o a la librería que utilizamos internamente de programación, que es lo que vamos a leer, qué codificación y que versión del estándar es.
 
->**Para comentar →** \<!-- texto -->
+>**Para comentar →** `<!-- texto -->`
 
 * Etiquetas pares:
 	* Se abren y cierran, Cuando lo que tenemos que escribir es muy variable, puede ser par (character por ejemplo, o cuando algo vaya a contener muchos datos)
@@ -132,7 +132,7 @@ El propósito de una DTD es establecer una **estructura bien definida y coherent
 
 **DTD** es más antiguo que **XSD** *(XML Schema Definition)* y **DTD** es *universal*, se interpreta bastante más fácil, los bancos lo usan. También se utiliza para *validar*.
 
-El **orden de validación puede variar según tu gusto**: Puedes poner primero **<!ELEMENT>** que es una *declaración*, seguido de el **término técnico** que se refieren a un *tipo de contenido permitido en un elemento*, como por ejemplo **#PCDATA** y justo abajo la otra *declaración* (si es que tiene) **<!ATTLIST>** que se refiere a la declaración de los *atributos*.
+El **orden de validación puede variar según tu gusto**: Puedes poner primero `<!ELEMENT>` que es una *declaración*, seguido de el **término técnico** que se refieren a un *tipo de contenido permitido en un elemento*, como por ejemplo **#PCDATA** y justo abajo la otra *declaración* (si es que tiene) `<!ATTLIST>` que se refiere a la declaración de los *atributos*.
 
 Terminos técnicos:
 
@@ -172,6 +172,8 @@ Terminos técnicos:
 ## Apuntes MarkDown
 
 MarkDown sirve para documentar, estos son los apuntes de MarkDown:
+
+`*cursiva*` → esto en markdown se le llama enfasis
 
 ### Listas
 * uno
@@ -295,3 +297,27 @@ Durante el HMTL4 y el LIFE SCHEME (5) hubo otro. XHTML, que consistia en:
 
 ### Etiquetas
 
+Todos los documentos HTML empiezan con un **index.html.**
+Todo texto o elemento ha de ir dentro de una etiqueta de **bloque**.
+
+**Etiqueta de bloque** → `<p>ola k ase</p>` (la p es de párrafo)
+
+>HTML5 no solo definia un estándar, si no que también le daba significado.
+>>**La semántica es lo que es y lo que significa.** 
+
+La semántica en HTML5 es importante porque permite que el contenido de una página web sea más fácilmente **interpretado** por los navegadores, lectores de pantalla y otros dispositivos, lo que mejora la accesibilidad y la experiencia del usuario en general.
+
+Tipos de etiquetas:
+* `<html>` → etiqueta raíz
+    * `<head>` → donde hay información de la página, o cosas que se tienen que interpretar en el body. Por ejemplo, el título de la página en la información de la pestaña.
+    * `<body>` → abre y cierra los contenidos 
+    * `<ul>` → bloque de lista, unordered list
+            * `<ol>` → lista ordenada.
+    * `<li>` → elementos
+    * `<a>` → address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
+
+**`<head>`** y **`<body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)*
+P y h1 son elementos en bloque, 
+Elementos en línea → strong y em
+
+Existen Elementos en bloque y en Línea, 
