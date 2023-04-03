@@ -295,37 +295,56 @@ Durante el HMTL4 y el LIFE SCHEME (5) hubo otro. XHTML, que consistia en:
 
 >Netscape habia hecho tan bien el motor, que hacer que interpretara las malas practicas de Microsoft fue imposible, y murio.
 
-### Etiquetas
+### Tipos de Etiquetas
 
 Todos los documentos HTML empiezan con un **index.html.**
 Todo texto o elemento ha de ir dentro de una etiqueta de **bloque**.
 
-**Etiqueta de bloque** → `<p>ola k ase</p>` (la p es de párrafo)
+**Etiqueta de bloque** → Se utilizan para crear bloques de contenido que empiezan y terminan en una nueva línea, creando una división visual clara en el diseño de la página. `<p>ola k ase</p>` (la p es de párrafo), `<ul>Lista</ul>`
+**Etiqueta en línea** → Se utilizan para elementos de contenido más pequeños y para elementos que no requieren una nueva línea.`<a>`, `<img>`, `<input>`, `<em>`, `<strong>`.
 
 >HTML5 no solo definia un estándar, si no que también le daba significado.
 >>**La semántica es lo que es y lo que significa.** 
 
 La semántica en HTML5 es importante porque permite que el contenido de una página web sea más fácilmente **interpretado** por los navegadores, lectores de pantalla y otros dispositivos, lo que mejora la accesibilidad y la experiencia del usuario en general.
 
-Tipos de etiquetas:
-* `<html></html>` → etiqueta raíz
-* `<head></head>` → donde hay información de la página, o cosas que se tienen que interpretar en el body. Por ejemplo, el título de la página en la información de la pestaña.
-    * `<title></title>`
-    * `<meta></meta>`
-    * `<script></script>`
-    * `<style></style>` 
-    * 
-* `<body></body>` → abre y cierra los contenidos 
-* `<ul></ul>` → bloque de lista, unordered list
-* `<ol></ol>` → lista ordenada.
-    * `<li></li>` → elementos
-    * `<a></a>` → address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
-    * <>
-**`<head>`** y **`<body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)*
-P y h1 son elementos en bloque, 
-Elementos en línea → strong y em
+**Todo documento HTML ha de empezar con la siguiente cabezera:** `<!DOCTYPE html>`, es el DTD. Si no la introducimos, pueden haber problemas de compatibilidad y que se interprete mal.
 
-Existen Elementos en bloque y en Línea, 
+### Etiquetas
+
+* `<html></html>` → Etiqueta raíz
+* `<head></head>` → Donde hay información de la página, o cosas que se tienen que interpretar en el body. Por ejemplo, el título de la página en la información de la pestaña.
+    * `<title></title>`→ Se utiliza para definir el título de la página web que se mostrará en la pestaña del navegador.
+    * `<meta></meta>` → Se utiliza para incluir metadatos de la página web, como la descripción, las palabras clave, el autor, la codificación de caracteres, entre otros.
+    * `<script></script>` → Se utiliza para incluir código JavaScript que se ejecutará en la página web.
+    * `<style></style>` → Se utiliza para definir hojas de estilo CSS que se aplicarán a la página web.
+    * `<link></link>` → Enlaza archivos externos, como hojas de estilo CSS, fuentes tipográficas, íconos, entre otros.
+* `<body></body>` → Abre y cierra los contenidos. Las siguientes etiquetas van dentro del body: 
+* `<nav></nav>` → Representa un conjunto de enlaces de navegación que permiten al usuario moverse por diferentes secciones de un sitio web.
+* `<header></header>` → Representaa la cabecera o encabezado de una página o sección. Puede contener elementos como el logotipo, el título de la página, la navegación principal, etc. Se suele ubicar al principio del body.
+* `<main></main>` → Es donde irán los contenidos del body (header, nav, main y footer son siblings). Se puede tener más de un nav, pero más de un main o header no es recomendable.
+* `<section></section>` → Se suele utilizar para dividir el contenido de una página en diferentes bloques.
+* `<ul></ul>` → Bloque de lista, unordered list
+* `<ol></ol>` → Lista ordenada.
+    * `<li></li>` → Elementos de la lista
+    * `<a></a>` → Address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
+    * `<h1></h1>` → Cabezera número 1. Es el título de la página.
+    * `<h2></h2>` → Cabezera número 2. Esta etiqueta puede contener h3, h4, h5.
+    * `<p></p>` → Párrafo de texto
+    * `<img src="" />` → La etiqueta imagen cierra en sí misma, es decir, es impar. Se utiliza **src** para indicar el link de la imagen.
+    * `<video></video>` → Videos.
+    * `<audio></audio>` → Audios.
+    * `<table></table>` → Tablas.
+* `<form></form>` → 
+    * `<button></button>` → Crea un botón. Puedes indicar si quieres que envíe el formulario o no de la siguiente manera: `<input type="button">` no envía datos, `<input type="submit">` envía datos.
+    * `<label></label>` → Se utiliza paea mejorar la accesibilidad de los formularios. El atributo for se utiliza para asociar la etiqueta label con un control de formulario
+* `<footer></footer>` →
+
+Etiquetas que no deberíamos utilizar:
+* `<marquee></marquee>` → Mueve texto por pantalla 
+* `<blink></blink>` → El texto parpadea
+
+**`<head></head>`** y **`<body></body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)
 
 Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace falta indentar, es solo para hacerlo más agradable a la vista):
 
@@ -343,9 +362,9 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
     <header>
         <nav>
             <ul>
-                <li><a href="Cybersecurity.html">Cybersecurity</a></li>
-                <li><a href="Games.html">Games</a></li>
-                <li><a href="Ethical_Hacking.html">Ethical Hacking</a></li>
+                <li><a href="cybersecurity.html">Cybersecurity</a></li>
+                <li><a href="games.html">Games</a></li>
+                <li><a href="ethical_hacking.html">Ethical Hacking</a></li>
             </ul>
         </nav>
     </header>
@@ -353,7 +372,7 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
         <section>
             <h1>Welcome to my website!</h1>
             <p>Here you will find information about our services and products.</p>
-            <a href="#" class="button">Learn more</a>
+            <a href="info.html" class="button">Learn more</a>
         </section>
         <section>
             <h2>Our Services</h2>
@@ -382,3 +401,5 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
 </body>
 </html>
 ```
+
+
