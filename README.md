@@ -474,7 +474,7 @@ background-color:red;
 
 ## Apuntes JavaScript 
 
-Para definir variables se utiliza la palabra let. ```JavaScript let variable = valor``` 
+Para definir variables se utiliza la palabra let. 
 
 JavaScript se considera un lenguaje de programación con tipado débil, lo que significa que no es necesario indicar el tipo de dato con el que estamos trabajando. A diferencia de otros lenguajes como Kotlin, no es necesario utilizar métodos como ".toString" o ".toInt" para convertir los datos a un tipo específico. En JavaScript, también es posible cambiar el tipo de dato de una variable directamente, y es posible concatenar varios tipos de datos. Si se declara una variable sin asignar un valor, su valor por defecto será "undefined".
 
@@ -580,7 +580,23 @@ setInterval(cuenta,1000);
 
 **Importante:** No se puede poner el mismo nombre a un id y a una función.
 
+### Objetos, Eventos y Propiedades
+
 JavaScript es un lenguaje orientado a objetos y eventos. Programamos cosas que esperan a que sucedan cosas o eventos.
 >Un objeto es algo que encapsula datos.
+
+El objeto *document* representa el documento HTML que se está visualizando en el navegador web. Se puede acceder a este objeto desde cualquier parte del código JavaScript dentro de la página web. La función *getElementById* es un método que forma parte del objeto *document* y que se utiliza para seleccionar un elemento del HTML según su **atributo id.**
+
+El **Árbol DOM** *(Document Object Model)* es una representación jerárquica de todos los elementos HTML de una página web que se carga en el navegador. Cada elemento HTML es un objeto en el árbol DOM y se puede acceder y manipular utilizando JavaScript.
+
+Por otro lado, el **innerHTML** es una *propiedad* de los elementos **DOM** en JavaScript que permite obtener o establecer el contenido HTML de un elemento. 
+
+Cuando se usa *document.getElementById()*, se busca en todo el **árbol DOM** del *documento* el *elemento* con el *atributo id* que se especifica como *argumento* en el *método*, y se devuelve un *objeto* que representa a ese *elemento* en particular.
+
+Un **evento** es una acción que ocurre en una página web, como por ejemplo hacer clic en un botón, mover el ratón, pulsar una tecla. Los eventos son una forma de interactuar con el usuario y de hacer que la página web responda a sus acciones. La etiqueta con sus dos atributos`<input type="button" value="CLICA AQUÍ" onClick="alerta_maxima();"/>` tiene un evento que es el onClick. Recordamos que `type="button"` no envía el formulario `type="submit si"`.
+
+
+
+
 
 
