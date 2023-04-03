@@ -318,7 +318,7 @@ La semántica en HTML5 es importante porque permite que el contenido de una pág
     * `<meta></meta>` → Se utiliza para incluir metadatos de la página web, como la descripción, las palabras clave, el autor, la codificación de caracteres, entre otros.
     * `<script></script>` → Se utiliza para incluir código JavaScript que se ejecutará en la página web.
     * `<style></style>` → Se utiliza para definir hojas de estilo CSS que se aplicarán a la página web.
-    * `<link></link>` → Enlaza archivos externos, como hojas de estilo CSS, fuentes tipográficas, íconos, entre otros.
+    * `<link />` → Enlaza archivos externos, como hojas de estilo CSS, fuentes tipográficas, íconos, entre otros.
 * `<body></body>` → Abre y cierra los contenidos. Las siguientes etiquetas van dentro del body: 
 * `<nav></nav>` → Representa un conjunto de enlaces de navegación que permiten al usuario moverse por diferentes secciones de un sitio web.
 * `<header></header>` → Representaa la cabecera o encabezado de una página o sección. Puede contener elementos como el logotipo, el título de la página, la navegación principal, etc. Se suele ubicar al principio del body.
@@ -326,11 +326,11 @@ La semántica en HTML5 es importante porque permite que el contenido de una pág
 * `<section></section>` → Se suele utilizar para dividir el contenido de una página en diferentes bloques.
 * `<ul></ul>` → Bloque de lista, unordered list.
 * `<ol></ol>` → Lista ordenada.
-    * `<li></li>` → Elementos de la lista
+    * `<li></li>` → Elementos de la lista.
     * `<a></a>` → Address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`.
     * `<h1></h1>` → Cabezera número 1. Es el título de la página.
     * `<h2></h2>` → Cabezera número 2. Esta etiqueta puede contener h3, h4, h5.
-    * `<p></p>` → Párrafo de texto
+    * `<p></p>` → Párrafo de texto.
     * `<img src="" />` → La etiqueta imagen cierra en sí misma, es decir, es impar. Se utiliza **src** para indicar el link de la imagen.
     * `<video></video>` → Videos.
     * `<audio></audio>` → Audios.
@@ -341,8 +341,8 @@ La semántica en HTML5 es importante porque permite que el contenido de una pág
 * `<footer></footer>` →  Representa el pie de página de una página o sección. Puede contener información de contacto, derechos de autor, enlaces a las redes sociales, etc. Se suele ubicar al final del body.
 
 Etiquetas que no deberíamos utilizar:
-* `<marquee></marquee>` → Mueve texto por pantalla 
-* `<blink></blink>` → El texto parpadea
+* `<marquee></marquee>` → Mueve texto por pantalla. 
+* `<blink></blink>` → El texto parpadea.
 
 **`<head></head>`** y **`<body></body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)*
 
@@ -407,6 +407,64 @@ Una vez hemos visto en profundidad HTML, me gustaría citar la siguiente frase:
 
 ---
 
-### CSS
+## Apuntes CSS (Cascading Style Sheets)
+
+Se decide "en cascada", porque todo va afectando a lo siguiente, no hace falta volver a definir las propiedades de una etiqueta de nuevo.
+
+La etiqueta que permite cambiar el estilo de HTML es `<style></style>`. Todo elemento en bloque ha de tener:
+
+* **MARGIN:** Margen exterior. 16px(arriba) 0(derecha) 128px(abajo) 20px(izquierda). Funciona como las agujas del reloj. El px se tiene que especificar a no ser que el valor sea 0, ya que se puede trabajar con varias unidades a parte de px.
+* **PADDING:** Margen interior.
+
+Las etiquetas que editamos dentro de la etiqueta style las llamamos **selectores**. El body a su vez tiene su propio MARGIN. Esta empujando hacia fuera.
+
+>RECORDATORIO: HTML define la estructura, CSS la forma o el estilo y JavaScript la acción.
+
+La etiqueta `<link />` permite referenciar ciertas configuraciones como por ejemplo la configuracion de la etiqueta `<style></style>` o las hojas de estilo. Se utiliza rel para referenciar el nombre y href para introducir el nombre del archivo. Displays: Es como se muestran los elementos en bloque.
+
+Código en CSS:
+
+```CSS
+html,body{
+margin:0;
+padding:0;
+}
+
+header{
+width:200px;
+padding:0 0 0 128px;
+background-image:url(logo.png);
+background-repeat:no-repeat;
+background-size:128px;
+}
+#contact-main h2{
+font-family:sans-serif;
+text-shadow: 2px 2px #ff0000;/*x e y*/
+color:#ffffff;
+-webkit-text-stroke: 1px #000000
+}
+
+#contact-main form p{
+display:flex;
+}
+#contact-main form label{
+width:160px;
+}
+
+#contact-main form p:nth-child/*Pseudoselector*/(odd){
+background-color:#ff0000;
+}
+
+#game-page header{
+background-color:red;
+}
+```
+
+
+
+
+
+
+
 
 
