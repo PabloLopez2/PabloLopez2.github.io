@@ -418,9 +418,21 @@ La etiqueta que permite cambiar el estilo de HTML es `<style></style>`. Todo ele
 
 Las etiquetas que editamos dentro de la etiqueta style las llamamos **selectores**. El body a su vez tiene su propio MARGIN. Esta empujando hacia fuera.
 
+Aunque pongamos margin 0, sobrará un pequeño espacio, y esto es porque el *body* también su propio margin, asíque si también le ponemos margin 0, se quitará el margen.
+
 >RECORDATORIO: HTML define la estructura, CSS la forma o el estilo y JavaScript la acción.
 
 La etiqueta `<link />` permite referenciar ciertas configuraciones como por ejemplo la configuracion de la etiqueta `<style></style>` o las hojas de estilo. Se utiliza rel para referenciar el nombre y href para introducir el nombre del archivo. Displays: Es como se muestran los elementos en bloque.
+
+**Pseudopropiedad** →  `h1 a:hover {text-decoration:underline;}` hand over. Nos sirve para cambiar las propiedades en el momento en que el cursor pase por encima de un enlace.
+
+**Display** → el atributo display dice como se muestran los elementos, podemos transformar elementos en línea en bloque.
+Existen 3 tipos de displays: 
+* Block. 
+* Inline. 
+* None.
+
+Para aplicar css dentro de un archivo y que me lo pille el archivo html → `<link rel="stylesheet" href="estilo.css" />`
 
 Código en CSS:
 
@@ -460,11 +472,115 @@ background-color:red;
 }
 ```
 
+## Apuntes JavaScript 
 
+Para definir variables se utiliza la palabra let. ```JavaScript let variable = valor``` 
 
+JavaScript se considera un lenguaje de programación con tipado débil, lo que significa que no es necesario indicar el tipo de dato con el que estamos trabajando. A diferencia de otros lenguajes como Kotlin, no es necesario utilizar métodos como ".toString" o ".toInt" para convertir los datos a un tipo específico. En JavaScript, también es posible cambiar el tipo de dato de una variable directamente, y es posible concatenar varios tipos de datos. Si se declara una variable sin asignar un valor, su valor por defecto será "undefined".
 
+### Console.log, variables y concatenación
 
+```JS
+console.log("ola k ase");
 
+let variable = 33;
+console.log(variable);
 
+let palabreja = "Hola ";
+let otra_palabreja = "(^_^)";
+let concatenado = palabreja+otra_palabreja;
+console.log(concatenado);
+```
+### Buclecitos
+
+```JS
+let contador =0;
+while (contador < 10) {
+	console.log(contador);
+	contador++;
+}
+
+for (let i = 0; i<10; i++){
+console.log(i);
+}
+```
+
+### Condiciones
+
+```JS
+let PrimerValor = 10;
+let SegundoValor = 6;
+
+	if (PrimerValor == SegundoValor){
+		console.log("Son iguales");
+	}
+	else if (PrimerValor > SegundoValor) {
+		console.log("El valor" ,PrimerValor,"es mayor que",SegundoValor);
+	}
+	else {
+		console.log("El SegundoValor es mayor");
+	}
+```
+
+### Funciones
+```JS
+function saluda(nombre) {
+	console.log("ola k ase", nombre)
+}
+
+saluda("JAN");
+```
+
+### Arrays
+
+```JS
+let videoconsolas = ["Nintendo Switch", "GameBoy Advance", "Nintendo 3ds", "Play Station 4"];
+let malwares = ["Ransomware", "Trojan", "Worm", "BackDoor", "SpyWare", "ForkBomb"];
+console.log(videoconsolas);
+console.log(malwares[0][3]);
+```
+
+### Booleans
+```JS
+let true = true;
+let false = false;
+
+let a = 5;
+let b = 10;
+if (a > 0 && b > 0) {
+  console.log("Son mayores que 0");
+}
+
+let edad = 15;
+if (edad < 18 || edad >= 65) {
+  console.log("No es mayor de edad");
+}
+
+let llueve = true;
+if (!llueve) {
+  console.log("Toca sortir al pati");
+} else {
+  console.log("Toca Smash");
+}
+```
+
+En java script los parametros son opcionales.
+
+**setInterval:** Es una funcion que ejecutará algo especifico (una funcion, por ejemplo) que le pasamos por un parámatero, en el segundo parametro indicaremos los milisegundos que se utilizaran de intérvalo. 
+**clearInterval:** Con esta funcion se detiene el intérvalo.
+```JS
+let contador=0;
+
+function cuenta () {
+	contador++;
+	document.getElementById("contador").innerHTML = contador;
+}
+setInterval(cuenta,1000);
+```
+
+**Importante:** No se puede poner el mismo nombre a un id y a una función.
+
+JavaScript es un lenguaje orientado a objetos y eventos. Programamos cosas que esperan a que sucedan cosas o eventos.
+>Un objeto es algo que encapsula datos.
 
 
