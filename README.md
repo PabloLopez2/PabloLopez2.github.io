@@ -13,11 +13,11 @@ Esta página es un test a modo de CV.
 
 - [x] Crear estilo básico
 
-# XML, DTD, Markdown, HTML, CSS y JavasScript
+# XML, DTD, Markdown, HTML, CSS y JavaScript
 
-## Apuntes XML (Extendes Markup Language)
+## Apuntes XML (Extended Markup Language)
 
-### XML, un poco de história
+### XML, un poco de historia
 
 **XML** *(Extended Markup Language)* es el lenguaje base de los lenguajes de marcas que tenemos hoy en día. XML no viene de la nada. En los años 70 era **SGML**, se utilizaba para marcar en documentos lo que era una **negrita**, una *cursiva*, ~~tachado~~ etc. Ya que en aquella época no había *interfaz gráfica*. El *driver* de la impresora **interpreta** esto, es decir, lo **parseaba** y ponía las **negritas**, *cursivas*… cuando tocaba. Llegan los 90, aparte de inventarse Linux, se inventa **Internet**. 
 
@@ -324,10 +324,10 @@ La semántica en HTML5 es importante porque permite que el contenido de una pág
 * `<header></header>` → Representaa la cabecera o encabezado de una página o sección. Puede contener elementos como el logotipo, el título de la página, la navegación principal, etc. Se suele ubicar al principio del body.
 * `<main></main>` → Es donde irán los contenidos del body (header, nav, main y footer son siblings). Se puede tener más de un nav, pero más de un main o header no es recomendable.
 * `<section></section>` → Se suele utilizar para dividir el contenido de una página en diferentes bloques.
-* `<ul></ul>` → Bloque de lista, unordered list
+* `<ul></ul>` → Bloque de lista, unordered list.
 * `<ol></ol>` → Lista ordenada.
     * `<li></li>` → Elementos de la lista
-    * `<a></a>` → Address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`
+    * `<a></a>` → Address, es la etiqueta que transforma en hipertexto (link), tenemos que darle un hipervínculo que direccione a algo. Para ello se utilizan las propiedades o atributos → `<a href=”http://google.es”>enlace</a>`.
     * `<h1></h1>` → Cabezera número 1. Es el título de la página.
     * `<h2></h2>` → Cabezera número 2. Esta etiqueta puede contener h3, h4, h5.
     * `<p></p>` → Párrafo de texto
@@ -335,16 +335,16 @@ La semántica en HTML5 es importante porque permite que el contenido de una pág
     * `<video></video>` → Videos.
     * `<audio></audio>` → Audios.
     * `<table></table>` → Tablas.
-* `<form></form>` → 
+* `<form></form>` → Crea un formulario donde los usuarios pueden enviar información al servidor web.
     * `<button></button>` → Crea un botón. Puedes indicar si quieres que envíe el formulario o no de la siguiente manera: `<input type="button">` no envía datos, `<input type="submit">` envía datos.
-    * `<label></label>` → Se utiliza paea mejorar la accesibilidad de los formularios. El atributo for se utiliza para asociar la etiqueta label con un control de formulario
-* `<footer></footer>` →
+    * `<label></label>` → Se utiliza paea mejorar la accesibilidad de los formularios. El atributo for se utiliza para asociar la etiqueta label con un control de formulario.
+* `<footer></footer>` →  Representa el pie de página de una página o sección. Puede contener información de contacto, derechos de autor, enlaces a las redes sociales, etc. Se suele ubicar al final del body.
 
 Etiquetas que no deberíamos utilizar:
 * `<marquee></marquee>` → Mueve texto por pantalla 
 * `<blink></blink>` → El texto parpadea
 
-**`<head></head>`** y **`<body></body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)
+**`<head></head>`** y **`<body></body>`** se conocen como **etiquetas hermanas**, ya que están en la misma parte del árbol *(siblings)*
 
 Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace falta indentar, es solo para hacerlo más agradable a la vista):
 
@@ -401,5 +401,12 @@ Pseudocódigo de HTML, para tener una idea de le estructura (aclaro que, no hace
 </body>
 </html>
 ```
+
+Una vez hemos visto en profundidad HTML, me gustaría citar la siguiente frase:
+>El verdadero error es cometer un error y no corregirlo.
+
+---
+
+### CSS
 
 
