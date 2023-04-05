@@ -646,7 +646,7 @@ En CSS, *class* nos permite definir varias cosas que están definidas a un mismo
 
 `<span></span>` → La etiqueta span se utiliza para aplicar estilos o características específicas a partes del contenido dentro de un elemento div o cualquier otro elemento en HTML. Por ejemplo, se puede utilizar la etiqueta span para resaltar una palabra específica en una oración o para cambiar el color del texto en un párrafo.
 
-/# → nos permite definir las propiedades de los elementos de id.
+\# → nos permite definir las propiedades de los elementos de id.
 
 *Class* e *id* se pueden poner con - (guión) porque son variables, pero name y otros no, las variables con _ (guión bajo).
 `-webkit-text-stroke` → El guión significa que aún no es oficial.
