@@ -637,11 +637,15 @@ git clone git@github.com:PabloLopez2/PabloLopez2.github.io.git
 
 Ahora mismo tenemos el servidor de desarrollo (maquina) por un lado y el público (web) en otro.
 En VIM → Ctrl w + - para hacer más pequeño o mas grande el script en vim o :resize 16. En modo visual s/jugador/valor reemplaza la string jugador por valor. En JavaScript, innerhtml es lo que hay dentro de la etiqueta `<p>hola</p>`
+
 **NaN** → Not a Number
 
 En CSS, *class* nos permite definir varias cosas que están definidas a un mismo tipo.
+
 `<div></div>` La etiqueta div también se utiliza para aplicar estilos específicos a secciones del contenido, lo que permite un mayor control de la apariencia visual de la página.
+
 `<span></span>` → La etiqueta span se utiliza para aplicar estilos o características específicas a partes del contenido dentro de un elemento div o cualquier otro elemento en HTML. Por ejemplo, se puede utilizar la etiqueta span para resaltar una palabra específica en una oración o para cambiar el color del texto en un párrafo.
+
 /# → nos permite definir las propiedades de los elementos de id.
 
 *Class* e *id* se pueden poner con - (guión) porque son variables, pero name y otros no, las variables con _ (guión bajo).
@@ -649,6 +653,7 @@ En CSS, *class* nos permite definir varias cosas que están definidas a un mismo
 El formulario si lo envias se guarda en la **URL** *(Uniform Resource Locator).*
 
 **Hardcodeado** → Es ser bruto. Cuando algo está "hardcodeado", significa que los valores o parámetros que se utilizan en una función o proceso están codificados directamente en el código fuente en lugar de ser definidos como variables o configuraciones externas que se pueden modificar fácilmente. 
+
 **Mnemotécnica** → Son las cosas en las que nos basamos para asociar alguna formula o algo 
 No se puede poner un id = funcion (el mismo nombre).
 
@@ -689,6 +694,7 @@ Las funciones asíncronas se escriben async function , todo el contenido de esta
 >>Objeto es algo que encapsula datos.
 
 **CORS** → son un conjunto de normas que nos permiten conectarnos a un sitio de manera remota
+
 **Curl** → es un comando que nos permite conectarnos a sitios remotos. 
 
 
