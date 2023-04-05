@@ -595,6 +595,101 @@ Cuando se usa *document.getElementById()*, se busca en todo el **árbol DOM** de
 
 Un **evento** es una acción que ocurre en una página web, como por ejemplo hacer clic en un botón, mover el ratón, pulsar una tecla. Los eventos son una forma de interactuar con el usuario y de hacer que la página web responda a sus acciones. La etiqueta con sus dos atributos`<input type="button" value="CLICA AQUÍ" onClick="alerta_maxima();"/>` tiene un evento que es el onClick. Recordamos que `type="button"` no envía el formulario `type="submit si"`.
 
+### Wordpress, dominios .com y ole.es
+
+Wordpress es un sitio donde nos permite tener un sistema de gestión de contenidos (CMS)
+En los años 2000 se invirtió mucho en dominios .com, estaba ole.es que desapareció a los 2 años, y se invirtió mucha pasta y **_s'en van anar tot en orris_**, sobretodo invirtieron empresas en telefónica, también estaba Terra, y Yahoo que aún sigue vivo pero que le queda poco. Además también estaba geocities.com. Github tiene github pages, que es lo que vamos a utilizar.
+
+### Certificados y empresas relacionadas con ello
+
+Hemos de saber que HTTP (Hypertext Transfer Protocol) es html o lenguajes de marcas.
+HTTPS s de secure, cifrado con ssl, para cifrar se necesitan certificados (certs) son códigos que permiten asegurar que esa información va a ir cifrada, los certificados no solo son para cifrar, si no que ese cifrado es válido porque ha sido validado. 
+
+Podemos crear nosotros mismos los certificados, así que por ello se necesita **validar**, hay empresas que se encargan de esto y hay que pagar. Pero los certificados dan pasta, si no está validado el certificado el navegador salta, es decir sale la alerta de que no es un sitio seguro. Esta es la empresa más grande de certificados: https://www.verisign.com/  *(pagas 99$ al año)*. También https://letsencrypt.org/ si no queremos pagar pero tiene validez de 60 días.
+
+Españita fue el país que dijo que los protocolos web tenían que ser cifrados. Durante los años 2000 y 2010, Verisign intentó meter miedo porque eran los más grandes a la hora de verificar certificados, entonces algunos se empezaron a dar cuenta de que daba igual quien validara el certificado mientras fuera **válido**. 
+>Si se hubiesen **cifrado** las webs antes, sobre los 90 o así, se habría muerto internet porque antes había poca potencia para abrir los navegadores.
+
+### Usuario webeditor
+
+Para crear el usuario:
+```Bash
+useradd -M -d /var/www/ -s /bin/bash webeditor
+passwd webeditor
+chown -R webeditor:webeditor www
+usermod -d /var/www webeditor
+```
+Podemos ver en el código que en /var/www/ no es lo mismo que /var/www , nosotros queríamos ponerlo en el directorio /www, entonces no lleba la / al final, por eso cambiamos en el último comando con el parámetro -d, y el parámetro -M es para evitar la creación del directorio de inicio del usuario.
+
+Hemos de generar una llave ssh para el usuario webeditor:
+```Bash
+ssh-keygen -t ed25519 -C "your@example.com"
+```
+
+>**Consejitos:** No hay que meterse en root con byobu, cuando buscamos en man, podemos buscar con **/algo** y pasar a la siguiente iteración con la **n**, para ir hacia atrás **mayus n**, para indentar o tabular hacia atrás **mayus tab**
+
+Para clonar nuestro directorio de github:
+```Bash
+git clone git@github.com:PabloLopez2/PabloLopez2.github.io.git
+```
+
+`<meta charset="UTF-8" /> `→ Esto sirve para tener los carácteres en **UTF-8**.
+
+Ahora mismo tenemos el servidor de desarrollo (maquina) por un lado y el público (web) en otro.
+En VIM → Ctrl w + - para hacer más pequeño o mas grande el script en vim o :resize 16. En modo visual s/jugador/valor reemplaza la string jugador por valor. En JavaScript, innerhtml es lo que hay dentro de la etiqueta `<p>hola</p>`
+**NaN** → Not a Number
+
+En CSS, *class* nos permite definir varias cosas que están definidas a un mismo tipo.
+`<div></div>` La etiqueta div también se utiliza para aplicar estilos específicos a secciones del contenido, lo que permite un mayor control de la apariencia visual de la página.
+`<span></span>` → La etiqueta span se utiliza para aplicar estilos o características específicas a partes del contenido dentro de un elemento div o cualquier otro elemento en HTML. Por ejemplo, se puede utilizar la etiqueta span para resaltar una palabra específica en una oración o para cambiar el color del texto en un párrafo.
+/# → nos permite definir las propiedades de los elementos de id.
+
+*Class* e *id* se pueden poner con - (guión) porque son variables, pero name y otros no, las variables con _ (guión bajo).
+`-webkit-text-stroke` → El guión significa que aún no es oficial.
+El formulario si lo envias se guarda en la **URL** *(Uniform Resource Locator).*
+
+**Hardcodeado** → Es ser bruto. Cuando algo está "hardcodeado", significa que los valores o parámetros que se utilizan en una función o proceso están codificados directamente en el código fuente en lugar de ser definidos como variables o configuraciones externas que se pueden modificar fácilmente. 
+**Mnemotécnica** → Son las cosas en las que nos basamos para asociar alguna formula o algo 
+No se puede poner un id = funcion (el mismo nombre).
+
+## Apuntes JSON
+
+**JSON** *(JavaScript Object Notation)* es un formato de intercambio de datos *ligero* y *fácil de leer* utilizado para representar *objetos* y *estructuras* de datos en la programación. Es un formato de texto que se utiliza para *transmitir* datos *estructurados* entre diferentes sistemas, incluyendo aplicaciones web y móviles.
+
+En un banco por ejemplo se usa XML antes que JSON, en JSON no son tan importantes los validadores, se utiliza para cosas instantáneas, pero un banco necesita validarlo todo, JSON ocupa poco y se envía rápido, es puro JavaScript y esto hace que el navegador interprete al instante el archivo, es mucho más rápido que XML y pesa menos. En amazon se usa JSON, pero si falla algo, es más seguro validar con XML.
+
+Con JSON abrimos y cerramos con llaves. Ejemplo de código:
+
+```JSON
+{
+	"id_character":2,
+	"name":"Mariana",
+	"age":"20",
+	"race":"Hada",
+	"gender":"F",
+	"height":25,
+	"weight":3.4,
+}
+```
+
+>**Consejo de CSS:** Para cambiar solo una estructura en concreto en HTML (por ejemplo el body), podemos asignarle un id, ej: game-page y llamarlo así pero con el # en el CSS, es decir así: `#game-page`.
+
+### Fetch, funciones asíncronas, Encapsulaciones y Promesas.
+
+Con JavaScript podemos descargar archivos desde el servidor de manera asíncrona. Fetch es asíncrono, esto significa que puede ocurrir en el momento de la carga de la página, principalmente lo que hace es conectarse al servidor para descargarse un archivo JSON, es como un proceso que se ejecuta de manera paralela cuando cargamos la página. Se queda en segundo plano. 
+
+Función anónima → es una función que no tiene nombre.
+
+>**Una función asíncrona en JavaScript no devuelve un valor**. 
+>>Los JSON han de ser procesados.
+
+Las funciones asíncronas se escriben async function , todo el contenido de esta función se retorna encapsulada y se llama promesa, es un objeto especial y JS internamente puede procesar si ha habido algún error. Las funciones asíncronas siempre retornan algo, y por ello siempre tiene then (todas las funciones asíncronas han de contener un then), la cual tiene una función con 1 parámetro. si ha ido mal podemos utilizar otra cosa pero que no se suele hacer. 
+
+>Toda función asíncrona retorna una promesa (objeto especial), y dentro de esa promesa están los datos.
+>>Objeto es algo que encapsula datos.
+
+**CORS** → son un conjunto de normas que nos permiten conectarnos a un sitio de manera remota
+**Curl** → es un comando que nos permite conectarnos a sitios remotos. 
 
 
 
