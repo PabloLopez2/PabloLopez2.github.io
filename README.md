@@ -697,7 +697,11 @@ Las funciones asíncronas se escriben async function , todo el contenido de esta
 
 **Curl** → es un comando que nos permite conectarnos a sitios remotos. 
 
+JavaScript se llama también ECMASCRIPT por un consorcio.
+TypeScript es una variante de JavaScript, un preprocesador es un motor de intérprete de lenguajes que se puede generar al vuelo, podemos decirle a un navegador que interprete un lenguaje que puedes crear y lo carga al vuelo y puede interpretarlo rápidamente. TypeScript fue creado por Microsoft, las variables en JS no tienen tipo y en TypeScript si.
 
+que es la asincronía en JavaScript?
+que proyectos recomiendas hacer primero?
+recomiendas leetcode?
 
-
-
+XML sirve para almacenar y transportar datos
