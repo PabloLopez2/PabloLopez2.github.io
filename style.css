@@ -31,6 +31,18 @@ h2{
   box-shadow: 2px 2px 5px #888;
 }
 
+h3{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #888;
+}
+
 .menu {
   /* Establecer el ancho al 100% */
   width: 100%;

@@ -38,51 +38,35 @@ function check_number(){
 }
 
 /*Juego adivinanzas*/
-// Variables globales
-let adivinanzas = []; // Array de objetos con adivinanza y respuesta
-let adivinanzaActual = 0; // Índice de la adivinanza actual en el arreglo
 
-// Obtener el elemento HTML que contiene la adivinanza y la respuesta
-const adivinanzaElement = document.getElementById("adivinanza");
-const respuestaInput = document.getElementById("respuesta");
+let adivinanzas = [];
 
-// Función para cargar las adivinanzas desde el archivo JSON
-function cargarAdivinanzas() {
-  fetch("adivinanzas.json")
-    .then((response) => response.json())
-    .then((data) => {
-      adivinanzas = data;
-      mostrarAdivinanza(adivinanzaActual);
-    })
-    .catch((error) => console.error(error));
+      fetch('adivinanzas.json')
+        .then(response => response.json())
+        .then(data => {
+          adivinanzas = data;
+          elegirAdivinanza();
+        })
+        .catch(error => console.error(error));
+
+      function elegirAdivinanza() {
+        const indice = Math.floor(Math.random() * adivinanzas.length);
+        const adivinanza = adivinanzas[indice].adivinanza;
+        document.getElementById('adivinanza').textContent = adivinanza;
+      }
+
+	  function comprobarRespuesta() {
+    let respuesta = document.getElementById('respuesta').value.toLowerCase();
+    let adivinanzaActual = document.getElementById('adivinanza').textContent;
+    let respuestaCorrecta = adivinanzas.find(adivinanza => adivinanza.adivinanza === adivinanzaActual).respuesta.toLowerCase();
+    if (respuesta === respuestaCorrecta) {
+      document.getElementById('mensaje').textContent = '¡Respuesta correcta!';
+      indiceActual++;
+      mostrarAdivinanza();
+    } else {
+      document.getElementById('mensaje').textContent = 'Respuesta incorrecta, inténtalo de nuevo.';
+    }
 }
-
-// Función para mostrar la adivinanza actual en pantalla
-function mostrarAdivinanza(index) {
-  adivinanzaElement.textContent = adivinanzas[index].adivinanza;
-}
-
-function comprobarRespuesta() {
-  // Obtener la respuesta ingresada por el usuario
-  var respuestaIngresada = document.getElementById("respuesta").value;
-  
-  // Obtener la respuesta correcta
-  var respuestaCorrecta = adivinanzas[indiceActual].respuesta;
-
-  // Verificar si la respuesta ingresada es correcta
-  if (respuestaIngresada.toLowerCase() === respuestaCorrecta.toLowerCase()) {
-    // Si la respuesta es correcta, mostrar un mensaje de felicitación
-    document.getElementById("mensaje").innerHTML = "¡Correcto!";
-    // Incrementar el índice actual para pasar a la siguiente adivinanza
-    indiceActual++;
-    // Mostrar la siguiente adivinanza
-    mostrarAdivinanza();
-  } else {
-    // Si la respuesta es incorrecta, mostrar un mensaje de error
-    document.getElementById("mensaje").innerHTML = "Respuesta incorrecta. Inténtalo de nuevo.";
-  }
-}
-
 
 
 /* PRUEBA
