@@ -41,32 +41,32 @@ function check_number(){
 
 let adivinanzas = [];
 
-      fetch('adivinanzas.json')
-        .then(response => response.json())
-        .then(data => {
-          adivinanzas = data;
-          elegirAdivinanza();
-        })
-        .catch(error => console.error(error));
+fetch('adivinanzas.json')
+.then(response => response.json())
+.then(data => {
+	adivinanzas = data;
+	elegirAdivinanza();
+})
+.catch(error => console.error(error));
 
-      function elegirAdivinanza() {
-        const indice = Math.floor(Math.random() * adivinanzas.length);
-        const adivinanza = adivinanzas[indice].adivinanza;
-        document.getElementById('adivinanza').textContent = adivinanza;
-      }
-
-	  function comprobarRespuesta() {
-    let respuesta = document.getElementById('respuesta').value.toLowerCase();
-    let adivinanzaActual = document.getElementById('adivinanza').textContent;
-    let respuestaCorrecta = adivinanzas.find(adivinanza => adivinanza.adivinanza === adivinanzaActual).respuesta.toLowerCase();
-    if (respuesta === respuestaCorrecta) {
-      document.getElementById('mensaje').textContent = '¡Respuesta correcta!';
-      indiceActual++;
-      mostrarAdivinanza();
-    } else {
-      document.getElementById('mensaje').textContent = 'Respuesta incorrecta, inténtalo de nuevo.';
-    }
+function elegirAdivinanza() {
+const indice = Math.floor(Math.random() * adivinanzas.length);
+const adivinanza = adivinanzas[indice].adivinanza;
+document.getElementById('adivinanza').textContent = adivinanza;
 }
+
+function comprobarRespuesta() {
+  let respuesta = document.getElementById('respuesta').value.toLowerCase();
+  let adivinanzaActual = document.getElementById('adivinanza').textContent;
+  let respuestaCorrecta = adivinanzas.find(adivinanza => adivinanza.adivinanza === adivinanzaActual).respuesta.toLowerCase();
+  if (respuesta === respuestaCorrecta) {
+    document.getElementById('mensaje').textContent = '¡Respuesta correcta!';
+    elegirAdivinanza();
+  } else {
+    document.getElementById('mensaje').textContent = 'Respuesta incorrecta, inténtalo de nuevo.';
+  }
+}
+
 
 
 /* PRUEBA
