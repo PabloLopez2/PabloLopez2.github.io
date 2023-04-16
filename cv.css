@@ -1,0 +1,106 @@
+/* Aplicar estilo al cuerpo de la página */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+  }
+  
+  /* Aplicar estilo a los encabezados de sección */
+  section h2 {
+    font-size: 36px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 60px;
+    margin-bottom: 20px;
+  }
+  
+  /* Aplicar estilo al texto dentro de las secciones */
+  section p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Aplicar estilo a las listas */
+  ul, ol {
+    font-size: 16px;
+    color: #444;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  /* Aplicar estilo a los enlaces */
+  a {
+    color: #337ab7;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+  
+  /* Aplicar estilo a la tabla */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  table th, table td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #f2f2f2;
+  }
+  
+
+  .menu {
+    /* Establecer el ancho al 100% */
+    width: 100%;
+    margin: 0 auto;
+    /* Resto de los estilos del menú */
+    background-color: #333;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .menu ul {
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Estilos para los elementos de la lista */
+  .menu li {
+    display: inline-block;
+    margin-right: 20px;
+    /* Distribuir los elementos de manera uniforme */
+    flex-grow: 1;
+  }
+  
+  /* Estilos para los enlaces */
+  .menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    transition: font-size 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  }
+  
+  /* Estilos para los enlaces al pasar el cursor */
+  .menu a:hover {
+    color: #f1c40f;
+    background-color: #555;
+    font-size: 30px;
+  }

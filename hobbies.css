@@ -1,6 +1,6 @@
 
 body {
-  background-image: url(./img/fondo.jpg);
+  background-image: url(./img/fondo2.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
@@ -10,14 +10,8 @@ body {
 .contenido {
   display: flex;
   align-items: center;
+  margin-left: 50px; /* ajusta el valor según sea necesario */
 }
-
-
-
-
-
-
-
 
 .box {
   width: 300px;
@@ -31,13 +25,6 @@ body {
   transform: rotate(360deg);
   transition: background-color 0.5s ease, transform 1s ease;
 }
-
-.box:hover {
-  background-color: blue;
-  transform: rotate(360deg);
-  transition: background-color 0.5s ease, transform 1s ease;
-}
-
 
 p {
   opacity: 0;
@@ -55,9 +42,6 @@ p {
   }
 }
 
-
-
-
 h1 {
   text-shadow: 1px 1px 0px black;
   transition: text-shadow 0.5s ease;
@@ -67,7 +51,25 @@ h1:hover {
   text-shadow: 2px 2px 0px white;
 }
 
+h2{
+  font-size: 40px;
+  font-weight: bold;
+  text-align: center;
+  color: #333;
+  text-shadow: 1px 1px #fff;
+  background-color: #f7f7f7;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 2px 2px 5px #888;
+}
 
+ul{
+  font-size: 40px;
+}
+
+ul p{
+  font-size: 20px;
+}
 
 button{
   background: black;

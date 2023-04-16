@@ -6,6 +6,8 @@
 	<title>Pablo's Project</title>
 	<link rel="icon" type="favicon.ico" href="./img/favicon.ico">
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="game.css" />
+
 	<script>
 let numero =  Math.floor(Math.random()*100+1);
 
@@ -35,6 +37,36 @@ function check_number(){
 	}
 }
 
+/*Juego adivinanzas*/
+
+let adivinanzas = [];
+
+      fetch('adivinanzas.json')
+        .then(response => response.json())
+        .then(data => {
+          adivinanzas = data;
+          elegirAdivinanza();
+        })
+        .catch(error => console.error(error));
+
+      function elegirAdivinanza() {
+        let indice = Math.floor(Math.random() * adivinanzas.length);
+        let adivinanza = adivinanzas[indice].adivinanza;
+        document.getElementById('adivinanza').textContent = adivinanza;
+      }
+
+      function comprobarRespuesta() {
+        let respuesta = document.getElementById('respuesta').value.toLowerCase();
+        let adivinanzaActual = document.getElementById('adivinanza').textContent;
+        let respuestaCorrecta = adivinanzas.find(adivinanza => adivinanza.adivinanza === adivinanzaActual).respuesta.toLowerCase();
+        if (respuesta === respuestaCorrecta) {
+          document.getElementById('mensaje').textContent = '¡Respuesta correcta!';
+        } else {
+          document.getElementById('mensaje').textContent = 'Respuesta incorrecta, inténtalo de nuevo.';
+        }
+      }
+
+/* PRUEBA
 fetch("enbuscadepaco.json").then(function(response){
 	return response.json();
 }).then(function(data){
@@ -57,13 +89,13 @@ function carga_datos (id_character) {
 
 	});
 }
-
+*/
 
 </script>
 </head>
 <body id="game-page">
 	<header>
-		<h1>Pablo López Socias<abbr title="Escola de Noves Tecnologies Interactives">ENTI</abbr></h1>
+		<h1>Pablo López Socias <abbr title="Escola de Noves Tecnologies Interactives">ENTI</abbr></h1>
 		<p>Soy estudiante de Cyber,  me gusta investigar, leer y actualizarme</p>
 	</header>	
 
@@ -82,18 +114,25 @@ function carga_datos (id_character) {
 		<form>
 			<p id="resultado">Introduce un número</p>
 			<p><input type="text" id="numero_jugador"/></p>
-			<p><input type="button" value="¡Adivina!" onClick="check_number();" id="botoncito" /></p>
+			<button type="button" onClick="check_number();" id="botoncito">¡Adivina!</button>
 
+		<h3>Adivina la adivinanza</h3>
+		<p id="adivinanza"></p>
+		<label for="respuesta">Escribe tu respuesta:</label>
+		<input type="text" id="respuesta">
+		<button onclick="comprobarRespuesta()">Comprobar</button>
+		<p id="mensaje"></p>
+		
 		</form>
 
-		<form id="characters" >
+		<!--form id="characters" >
 		<ul id="character_list">
 			<li><button type="button" id="character1" onClick="carga_datos(1);">Eustaquio</button></li>
 			<li><button type="button" id="character2" onClick="carga_datos(2);">Mariana</button></li>
 		</ul>
 		<section id="character_data">
 		
-		</section>
+		</section-->
 		
 		</form>
 

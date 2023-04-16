@@ -1,0 +1,50 @@
+body {
+    background-color: #b3d9ff;
+  }
+
+#contact-main {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px;
+    background-color: #f8f8f8;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 5px #ccc;
+    border-radius: 5px;
+  }
+  
+  #contact-main h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  #contact-main form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  #contact-main label {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  #contact-main input,
+  #contact-main select {
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    background-color: #f2f2f2;
+  }
+  
+  #contact-main input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+  }
+  
+  #contact-main input[type="submit"]:hover {
+    background-color: #45a049;
+  }
+  
