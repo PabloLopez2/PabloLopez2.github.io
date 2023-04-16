@@ -38,33 +38,51 @@ function check_number(){
 }
 
 /*Juego adivinanzas*/
+// Variables globales
+let adivinanzas = []; // Array de objetos con adivinanza y respuesta
+let adivinanzaActual = 0; // Índice de la adivinanza actual en el arreglo
 
-let adivinanzas = [];
+// Obtener el elemento HTML que contiene la adivinanza y la respuesta
+const adivinanzaElement = document.getElementById("adivinanza");
+const respuestaInput = document.getElementById("respuesta");
 
-      fetch('adivinanzas.json')
-        .then(response => response.json())
-        .then(data => {
-          adivinanzas = data;
-          elegirAdivinanza();
-        })
-        .catch(error => console.error(error));
+// Función para cargar las adivinanzas desde el archivo JSON
+function cargarAdivinanzas() {
+  fetch("adivinanzas.json")
+    .then((response) => response.json())
+    .then((data) => {
+      adivinanzas = data;
+      mostrarAdivinanza(adivinanzaActual);
+    })
+    .catch((error) => console.error(error));
+}
 
-      function elegirAdivinanza() {
-        let indice = Math.floor(Math.random() * adivinanzas.length);
-        let adivinanza = adivinanzas[indice].adivinanza;
-        document.getElementById('adivinanza').textContent = adivinanza;
-      }
+// Función para mostrar la adivinanza actual en pantalla
+function mostrarAdivinanza(index) {
+  adivinanzaElement.textContent = adivinanzas[index].adivinanza;
+}
 
-      function comprobarRespuesta() {
-        let respuesta = document.getElementById('respuesta').value.toLowerCase();
-        let adivinanzaActual = document.getElementById('adivinanza').textContent;
-        let respuestaCorrecta = adivinanzas.find(adivinanza => adivinanza.adivinanza === adivinanzaActual).respuesta.toLowerCase();
-        if (respuesta === respuestaCorrecta) {
-          document.getElementById('mensaje').textContent = '¡Respuesta correcta!';
-        } else {
-          document.getElementById('mensaje').textContent = 'Respuesta incorrecta, inténtalo de nuevo.';
-        }
-      }
+// Función para manejar el evento de clic en el botón
+function verificarRespuesta() {
+  const respuesta = respuestaInput.value.toLowerCase();
+  if (respuesta === adivinazas[adivinanzaActual].respuesta.toLowerCase()) {
+    // La respuesta es correcta, avanzar a la siguiente adivinanza
+    adivinanzaActual++;
+    if (adivinanzaActual >= adivinanzas.length) {
+      // Ya se han mostrado todas las adivinanzas, mostrar mensaje de fin del juego
+      adivinanzaElement.textContent = "¡Felicitaciones, has completado todas las adivinanzas!";
+      respuestaInput.disabled = true;
+    } else {
+      // Mostrar la siguiente adivinanza
+      mostrarAdivinanza(adivinanzaActual);
+      respuestaInput.value = "";
+    }
+  } else {
+    // La respuesta es incorrecta, no avanzar a la siguiente adivinanza
+    alert("Respuesta incorrecta. Intenta de nuevo.");
+  }
+}
+
 
 /* PRUEBA
 fetch("enbuscadepaco.json").then(function(response){
